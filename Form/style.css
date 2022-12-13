@@ -1,0 +1,309 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+    width: 1200px;
+    margin: auto;
+  
+}
+
+
+.box_a
+{
+   height: 1000px;
+    width: 1200px;
+    background-image: url(./backgroundimage.jpeg);
+}
+.box
+{
+    position: relative;
+    width: 380px;
+    height: 480px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 15%;
+
+}
+.box::before
+{
+    content:"";
+    top: -50%;
+    left: -50%;
+    position: absolute;
+    width: 380px;
+    height: 520px;
+    background: linear-gradient(0deg, transparent, #45f3ff ,#45f3ff);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+
+}
+
+
+.box::after
+{
+    content:"";
+    top: -50%;
+    left: -50%;
+    position: absolute;
+    width: 380px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, #45f3ff ,#45f3ff);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay:-3s ;
+
+}
+
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+.form
+{
+    position: absolute;
+    background: #28292d;
+    z-index:10 ;
+    inset: 3px;
+    border-radius: 8px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 
+{
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center
+    /* letter-spacing: 0.1em; */
+}
+
+.inputBox
+{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputBox input
+{
+    position: relative;
+    width:100% ;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none; 
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+
+}
+
+.inputBox  span
+{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+
+}
+
+.inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f5ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+
+}
+
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+
+}
+
+.links
+{
+    display: flex;
+    justify-content: space-between;
+}
+.links a 
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #21d1e9;
+    text-decoration: none;
+
+}
+
+.check
+{
+    margin-top: 10px;
+}
+  
+
+.check_p
+{
+    display: inline-block;
+    font-size: 8px;
+}
+.check_p a
+{
+    color: #21d1e9;
+}
+
+.in
+{
+    background-color: #8f8f8f;
+}
+
+
+
+.submit
+{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: aquamarine;
+    width: 305px;
+    margin-top: 20px;
+}
+
+
+.hr
+{
+    width: 100px;
+    height: 2px;
+    color: #ffffff;
+}
+
+.h6
+{
+    font-size: 7px;
+    padding-left: 10px;
+    padding-right: 5px;
+    color: #ffffff;
+  
+  
+  
+}
+
+.social
+{
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social_media
+{
+ /* margin-top: 20px;
+ margin-top: 30px;
+ margin */
+ margin: 20px auto;
+}
+
+.form, .social_media
+{
+  padding-left: 25px;
+}
+
+
+.btn-f,.btn-t,.btn-g
+{
+   padding: 4px;
+   border: none;
+   border-radius: 4px;
+ 
+}
+
+.btn-t{
+    margin-left: 15px;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color:rgb(0, 195, 255) ;
+ 
+}
+
+
+.btn-g{
+    margin-left: 15px;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: rgb(221, 15, 15);
+   
+}
+.btn-f
+{
+    background-color: rgb(29, 29, 221);
+ 
+    color: #ffffff;
+}
+
+.foot
+{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    word-spacing: 1px;
+
+}
+.foot a
+{
+    color: #21d1e9;
+}
+.foot p{
+    color: aliceblue;
+}
+
+.btn-f,.btn-t,.btn-g:hover
+{
+    cursor: pointer;
+}
